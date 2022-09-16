@@ -1,33 +1,21 @@
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 public class Culture {
     private String name;
     private String description;
-    private LinkedList<String> countries = new LinkedList<>();
-    private LinkedList<Deity> deities = new LinkedList<>();
+    private LinkedList<String> countries;
+    private LinkedList<Deity> deities;
 
     public Culture(String name, String description) {
         this.name = name;
         this.description = description;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setDescription(String description) {
-        this.description = description;
-    }
-    public void setCountries(LinkedList<String> countries) {
-        this.countries = countries;
+        countries = new LinkedList<>();
+        deities = new LinkedList<>();
     }
     public void addRelatedCountry(String country) {
         countries.add(country);
     }
-    public void setDeities(LinkedList<Deity> deities) {
-        this.deities = deities;
-    }
+
     public void addDeity(Deity deity) {
         deities.add(deity);
     }

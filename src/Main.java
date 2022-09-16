@@ -38,7 +38,7 @@ public class Main {
     private static void printCulture(Culture culture) {
         System.out.print("================ ");
         System.out.print(culture.getName() + " - " + culture.getDescription());
-        System.out.println("================ ");
+        System.out.println(" ================");
 
         LinkedList<String> countries = culture.getRelatedCountries();
 
@@ -53,7 +53,7 @@ public class Main {
         List<Deity> deities = culture.getDeities();
 
         for (Deity deity : deities) {
-            System.out.println(String.format("%s >> %s", deity.getName(), deity.getDescription()) );
+            System.out.printf("%s >> %s%n", deity.getName(), deity.getDescription());
 
             LinkedList<Deity> parents = deity.getParents();
             Iterator<Deity> parentsIterator = parents.iterator();
